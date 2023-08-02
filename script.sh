@@ -5,8 +5,11 @@ USER_ID=${USER_ID}
 GITHUB_TOKEN=${GITHUB_TOKEN}
 GITHUB_REPOSITORY="github.com/ATG-AMS/dh-next-web.git"
 
+# 작업 디렉토리를 '/app'으로 변경합니다.
+cd /app
+
 # '/usr/src/app' 내에 'donghae-front' 디렉토리를 만들고, 그곳에 레포지토리를 클론합니다.
-git clone https://${USER_ID}:${GITHUB_TOKEN}@${GITHUB_REPOSITORY} /app --config core.askPass=true
+git clone https://${USER_ID}:${GITHUB_TOKEN}@${GITHUB_REPOSITORY} --config core.askPass=true
 
 # 작업 디렉토리를 '/usr/src/app/donghae-front'으로 변경합니다.
 cd /app/dh-next-web
