@@ -9,10 +9,9 @@ GITHUB_REPOSITORY="github.com/ATG-AMS/dh-next-web.git"
 cd /app
 
 # '/usr/src/app' 내에 'donghae-front' 디렉토리를 만들고, 그곳에 레포지토리를 클론합니다.
-git clone https://${USER_ID}:${GITHUB_TOKEN}@${GITHUB_REPOSITORY} --config core.askPass=true
+git clone https://${USER_ID}:${GITHUB_TOKEN}@${GITHUB_REPOSITORY} --config core.askPass=true /app
 
-# 작업 디렉토리를 '/usr/src/app/donghae-front'으로 변경합니다.
-cd /app/dh-next-web
+git checkout dev
 
 # 애플리케이션 종속성을 설치합니다.
 npm install
