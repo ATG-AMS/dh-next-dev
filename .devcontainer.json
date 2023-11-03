@@ -3,12 +3,13 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "forwardPorts": [4000],
-    "appPort": {"4000":{"label":"Application port"}},
+    "forwardPorts": [3000],
+    "appPort": {"3000":{"label":"Application port"}},
     "workspaceFolder": "/app/dh-next-web",
     "customizations": {
         "vscode": {
             "extensions": [
+                "wallabyjs.console-ninja",
                 "chakrounanas.turbo-console-log",
                 "codezombiech.gitignore",
                 "dbaeumer.vscode-eslint",
@@ -34,7 +35,6 @@
                 "visualstudioexptteam.intellicode-api-usage-examples",
 				"bradlc.vscode-tailwindcss",
 				"austenc.tailwind-docs",
-
             ]
         }
     }
