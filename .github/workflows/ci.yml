@@ -26,6 +26,6 @@ jobs:
       - name: Build and release devcontainer Multi-Platform
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/ATG-AMS/dh-next-dev
-          platform: linux/amd64,linux/arm64/v8
+          imageName: ghcr.io/atg-ams/dh-next-dev
+          platform: linux/amd64,linux/arm64
           push: always
