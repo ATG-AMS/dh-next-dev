@@ -1,15 +1,16 @@
 {
     "name": "dh-next-dev",
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "target": "dev"
     },
-    "forwardPorts": [3000],
-    "appPort": {"3000":{"label":"Application port"}},
-    "workspaceFolder": "/app/dh-next-web",
+    "appPort": [3000, 6006],
+    "workspaceFolder": "/app",
     "customizations": {
         "vscode": {
             "extensions": [
                 "wallabyjs.console-ninja",
+                "unifiedjs.vscode-mdx",
                 "chakrounanas.turbo-console-log",
                 "codezombiech.gitignore",
                 "dbaeumer.vscode-eslint",

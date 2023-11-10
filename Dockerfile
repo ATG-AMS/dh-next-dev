@@ -1,7 +1,7 @@
 # Node.js LTS Alpine 이미지를 가져옵니다.
 FROM node:lts-alpine
 
-LABEL org.opencontainers.image.source=https://github.com/ATG-AMS/dh-next-web
+LABEL org.opencontainers.image.source=https://github.com/ATG-AMS/dh-next-dev
 
 # npm 버전을 최신 안정 버전으로 설정합니다.
 RUN npm install -g npm@latest --no-cache
@@ -22,7 +22,8 @@ RUN chmod +x /scripts/script.sh /scripts/healthcheck.sh
 WORKDIR /app
 
 # 외부에서 접근 가능한 포트를 엽니다.
-EXPOSE 3000
+EXPOSE 4000
+EXPOSE 6000
 
 # HEALTHCHECK를 설정합니다.
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD /scripts/healthcheck.sh
