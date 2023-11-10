@@ -27,5 +27,5 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/atg-ams/dh-next-dev
-          platform: linux/amd64,linux/arm64
+          platform: linux/amd64
           push: always
