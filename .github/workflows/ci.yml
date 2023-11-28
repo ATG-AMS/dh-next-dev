@@ -29,9 +29,25 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and release devcontainer Multi-Platform
-        uses: devcontainers/ci@v0.3.1900000338
+      - name: Get the date
+        id: date
+        run: |
+          echo "VERSION=$(date +"%Y%m%d%H%M%S")" >> $GITHUB_ENV
+          echo "version=$(date +"%Y%m%d%H%M%S")" >> $GITHUB_OUTPUT
+      # - name: Build and release devcontainer Multi-Platform
+      #   uses: devcontainers/ci@v0.3.1900000338
+      #   with:
+      #     imageName: ghcr.io/atg-ams/dh-next-dev
+      #     platform: linux/amd64,linux/arm64
+      #     push: always
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
         with:
-          imageName: ghcr.io/atg-ams/dh-next-dev
-          platform: linux/amd64,linux/arm64
-          push: always
+          context: .
+          file: ./.devcontainer/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/atg-ams/dh-next-dev:${{ env.VERSION }}
+            ghcr.io/atg-ams/dh-next-dev:latest
