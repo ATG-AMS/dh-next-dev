@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and release devcontainer Multi-Platform
-        uses: devcontainers/ci@ede49b4ab35758f07551fa9afb3bc8a9e53b8dfd #v0.3
+        uses: devcontainers/ci@v0.3.1900000338
         with:
           imageName: ghcr.io/atg-ams/dh-next-dev
           platform: linux/amd64,linux/arm64
