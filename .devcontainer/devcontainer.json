@@ -1,42 +1,38 @@
 {
-    "name": "dh-next-dev",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "target": "dev"
-    },
-    "appPort": [3000, 6006],
-    "workspaceFolder": "/app",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "wallabyjs.console-ninja",
-                "unifiedjs.vscode-mdx",
-                "chakrounanas.turbo-console-log",
-                "codezombiech.gitignore",
-                "dbaeumer.vscode-eslint",
-                "donjayamanne.git-extension-pack",
-                "donjayamanne.githistory",
-                "eamodio.gitlens",
-				"seatonjiang.gitmoji-vscode",
-                "esbenp.prettier-vscode",
-                "formulahendry.auto-rename-tag",
-                "github.github-vscode-theme",
-                "gruntfuggly.todo-tree",
-				"wayou.vscode-todo-highlight",
-                "intellsmi.comment-translate",
-                "mechatroner.rainbow-csv",
-                "mhutchie.git-graph",
-                "ms-ceintl.vscode-language-pack-ko",
-                "ms-vscode.live-server",
-                "ms-vsliveshare.vsliveshare",
-                "oderwat.indent-rainbow",
-                "ryanluker.vscode-coverage-gutters",
-                "shardulm94.trailing-spaces",
-                "streetsidesoftware.code-spell-checker",
-                "visualstudioexptteam.intellicode-api-usage-examples",
-				"bradlc.vscode-tailwindcss",
-				"austenc.tailwind-docs",
-            ]
-        }
+  "name": "dh-next-dev",
+  "image": "node:lts-alpine",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "wallabyjs.console-ninja",
+        "unifiedjs.vscode-mdx",
+        "chakrounanas.turbo-console-log",
+        "codezombiech.gitignore",
+        "dbaeumer.vscode-eslint",
+        "donjayamanne.git-extension-pack",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "seatonjiang.gitmoji-vscode",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "github.github-vscode-theme",
+        "gruntfuggly.todo-tree",
+        "wayou.vscode-todo-highlight",
+        "intellsmi.comment-translate",
+        "mechatroner.rainbow-csv",
+        "mhutchie.git-graph",
+        "ms-ceintl.vscode-language-pack-ko",
+        "ms-vscode.live-server",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "ryanluker.vscode-coverage-gutters",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "bradlc.vscode-tailwindcss",
+        "austenc.tailwind-docs"
+      ]
     }
+  }
 }
