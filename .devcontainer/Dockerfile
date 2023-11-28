@@ -1,5 +1,5 @@
 # Node.js LTS Alpine 이미지를 가져옵니다.
-FROM node:lts-alpine
+FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
 
 LABEL org.opencontainers.image.source=https://github.com/ATG-AMS/dh-next-dev
 
@@ -23,7 +23,7 @@ WORKDIR /app
 
 # 외부에서 접근 가능한 포트를 엽니다.
 EXPOSE 4000
-EXPOSE 6000
+EXPOSE 6006
 
 # HEALTHCHECK를 설정합니다.
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD /scripts/healthcheck.sh
