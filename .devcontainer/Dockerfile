@@ -1,4 +1,4 @@
-# Node.js LTS Alpine 이미지를 가져옵니다.
+# Node.js LTS Bullseye 이미지를 가져옵니다.
 FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
 
 LABEL org.opencontainers.image.source=https://github.com/ATG-AMS/dh-next-dev
@@ -9,11 +9,10 @@ RUN npm install -g npm@latest --no-cache
 # git을 설치합니다.
 RUN apt-get update && apt-get install git
 
-# 스크립트 파일을 보관할 디렉토리를 만듭니다.
-RUN mkdir /scripts
+USER node
 
 # 스크립트 파일을 /scripts 디렉토리에 복사합니다.
-COPY script.sh healthcheck.sh /scripts/
+COPY --chown=node:node script.sh healthcheck.sh /scripts/
 
 # 스크립트 파일을 실행 가능하게 만듭니다.
 RUN chmod +x /scripts/script.sh /scripts/healthcheck.sh
