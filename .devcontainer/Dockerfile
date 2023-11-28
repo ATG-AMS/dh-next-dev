@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.source=https://github.com/ATG-AMS/dh-next-dev
 RUN npm install -g npm@latest --no-cache
 
 # git을 설치합니다.
-RUN apk add --no-cache git
+RUN apt-get update && apt-get install git
 
 # 스크립트 파일을 보관할 디렉토리를 만듭니다.
 RUN mkdir /scripts

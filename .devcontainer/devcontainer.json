@@ -1,6 +1,6 @@
 {
   "name": "dh-next-dev",
-  "image": "node:lts-alpine",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
   "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
