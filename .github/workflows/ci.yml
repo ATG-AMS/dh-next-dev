@@ -44,6 +44,7 @@ jobs:
           platform: linux/amd64,linux/arm64
           push: always
           refFilterForPush: refs/heads/main
+          noCache: true
           # runCmd: echo "$HELLO - $WORLD"
 
       # - name: Build and Push Docker Image
