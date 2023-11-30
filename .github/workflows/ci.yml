@@ -37,8 +37,10 @@ jobs:
           
       - name: Build and release devcontainer Multi-Platform
         uses: devcontainers/ci@v0.3.1900000338
+        env:
+          BUILDX_NO_DEFAULT_ATTESTATIONS: true
         with:
-          imageName: ghcr.io/atg-ams/dh-next-dev
+          imageName: ghcr.io/${{ github.repository }}
           platform: linux/amd64,linux/arm64
           push: always
           runCmd: echo "$HELLO - $WORLD"
