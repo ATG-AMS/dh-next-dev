@@ -34,13 +34,13 @@ jobs:
         run: |
           echo "VERSION=$(date +"%Y%m%d%H%M%S")" >> $GITHUB_ENV
           echo "version=$(date +"%Y%m%d%H%M%S")" >> $GITHUB_OUTPUT
-          
+
       - name: Build and release devcontainer Multi-Platform
         uses: devcontainers/ci@v0.3.1900000338
         env:
           BUILDX_NO_DEFAULT_ATTESTATIONS: true
         with:
-          imageName: ghcr.io/${{ github.repository }}
+          imageName: ghcr.io/atg-ams/dh-next-dev
           platform: linux/amd64,linux/arm64
           push: always
           refFilterForPush: refs/heads/main
