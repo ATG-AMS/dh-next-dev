@@ -41,11 +41,11 @@ jobs:
           BUILDX_NO_DEFAULT_ATTESTATIONS: true
         with:
           imageName: ghcr.io/atg-ams/dh-next-dev
-          imageTag: ${{ env.VERSION }}
+          imageTag: latest,${{ env.VERSION }}
           platform: linux/amd64,linux/arm64
           push: always
-          refFilterForPush: refs/heads/main
-          noCache: true
+          # refFilterForPush: refs/heads/main
+          # noCache: true
           # runCmd: echo "$HELLO - $WORLD"
 
       # - name: Build and Push Docker Image
