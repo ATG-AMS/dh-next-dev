@@ -1,6 +1,8 @@
 {
   "name": "dh-next-dev",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
